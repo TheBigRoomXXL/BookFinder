@@ -119,7 +119,7 @@ class UI
                 }
             }
 
-            //Génération des tables HTML. Une table par item.
+            //Génération des tables HTML. Une table par book.
             booksContainer.innerHTML += `
             <table class="table table-light table-borderless my-3 p-2" >
                 <tr>
