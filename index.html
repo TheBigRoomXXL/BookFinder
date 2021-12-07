@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/fe3a64cdbb.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://bootswatch.com/5/litera/bootstrap.min.css">
+        <title>Books Finder</title>
+    </head>
+
+    <body class="min-vh-100">
+        <div class="d-flex justify-content-center"><h1 class="display-1 my-5"><em>Book Finder</em></h1></div>
+
+
+        <div class="container">   
+            <form id="form-search" class="form-inline mb-5">
+                <div class="input-group">
+                    <input type="text" id="keywords" class="form-control form-control-lg  w-50 mx-4" placeholder="Title, Author, ISBN...">
+                    <button type="submit" class="btn btn-primary btn-lg px-5">Search</button>
+                </div>
+            </form>
+
+            <div id="alertLocation"></div>
+            <div id="booksContainer" ></div>           
+            
+        </div>
+    </body>
+    <script type="text/javascript" src="app.js"></script>
+</html> 
