@@ -11,7 +11,7 @@ class APIManagement
     // Requete vers l'API Google Books
     static queryGoogleBook(keywords,replace)
     {
-        if(keywords == ""){keywords = "stoic";}
+        if(keywords == ""){keywords = "";}
         let queryText = `https://www.googleapis.com/books/v1/volumes?q=${keywords}&key=AIzaSyC-NoSWtoOfk4H8R2RFEga3kpM4lcbB_s0`;
         const xhr = new XMLHttpRequest();
         xhr.open('GET', queryText, true);
