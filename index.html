@@ -9,10 +9,11 @@
         <title>Books Finder</title>
     </head>
 
-    <body class="min-vh-100">
-        <div class="d-flex justify-content-center"><h1 class="display-1 my-5"><em>Book Finder</em></h1></div>
-
-
+    <body class="d-flex flex-column min-vh-100">
+        <div class="d-flex justify-content-center">
+            <h1 class="display-1 mb-5"><em>Book Finder</em></h1>
+        </div>
+        
         <div class="container">   
             <form id="form-search" class="form-inline mb-5">
                 <div class="input-group">
@@ -23,8 +24,15 @@
 
             <div id="alertLocation"></div>
             <div id="booksContainer" ></div>           
+            <div class="d-flex justify-content-center"><button id="loadMoreBtn" class="btn btn-primary btn-lg my-4 d-none">Load more results</button></div>
             
         </div>
+
+        <footer class="footer mt-auto  bg-primary">
+            <p class="lead text-center text-white fs-6 text pt-2">Made by <b>Sébastien LOVERGNE</b> with Vanilla Javascript, Bootstrap V5.0 and GoogleBookAPI as a backend.<br>
+                Theme from bootswatch.com. Icons from Font Awesome. Web fonts from Google.
+            </p>
+        </footer>
     </body>
     <script type="text/javascript" src="app2.js"></script>
 </html> 

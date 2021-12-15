@@ -7,6 +7,13 @@ document.getElementById("form-search").addEventListener("submit", function(evt)
     queryGoogleBook(keyworkds,true);
 });
 
+document.getElementById("loadMoreBtn").addEventListener("click", function(evt)
+{
+    const keyworkds = document.getElementById('keywords').value;
+    queryNumber += 1;
+    queryGoogleBook(keyworkds,false);
+});
+
 
 
 function queryGoogleBook(keywords,reset)
@@ -24,12 +31,14 @@ function queryGoogleBook(keywords,reset)
             {
                 if(reset){Storage.reset();}
                 let books = returnData.items;
+                console.log(books);
                 books.forEach((googleBook) => {
                     const book = Book.fromGoogleBookToBook(googleBook);
-                    Storage.addBook(book);
-                }) 
-                console.log(booksList);
+                    if(book !='Error: No title'){Storage.addBook(book)};
+                })      
                 UI.printBooksList();
+                document.getElementById("loadMoreBtn").className = "btn btn-primary btn-lg my-3";
+                console.log(booksList);
             }
             else
             {
