@@ -181,42 +181,44 @@ class UI
 
             //Génération des tables HTML. Une table par book.
             booksContainer.innerHTML += `
-            <table class="table table-light table-borderless my-3 p-2" >
-                <tr>
-                    <td class="text-justify">
-                            <h3>${book.title}<small class="text-muted">${book.subtitle}</small></h3>     
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <span class="badge rounded-pill bg-secondary"><div title="${book.ratingsCount} ratings">${ratingHTML}</div></span>
-                        <span class="badge rounded-pill bg-secondary">${book.authors}</span>
-                        <span class="badge rounded-pill bg-secondary">${book.publisher}</span>
-                        <span class="badge rounded-pill bg-secondary">${book.publishedYear}</span>
-                    </td>  
-                </tr>
-                <tr>
-                    <td>
-                        <table>
-                            <tr class="align-top">
-                                <td class="px-2"> 
-                                    <img src="${book.cover}" alt="No cover available."> 
-                                </td>
-                                <td class="text-justify px-2" style="
-                                    overflow: hidden; 
-                                    text-overflow: ellipsis; 
-                                    display: -webkit-box;
-                                             -webkit-line-clamp: 9; /* number of lines to show */
-                                                     line-clamp: 9; 
-                                            -webkit-box-orient: vertical;">
-                                        ${book.synopsis}
-                                </td>
-                            </tr>
-                        </table>
-                        
-                    </td>
-                </tr>
-            </table>`;
+            <div class="container bg-white my-3 " style="border-radius: 15px; overflow: hidden;">
+                <table class="table table-light table-borderless my-3 p-2" >
+                    <tr>
+                        <td class="text-justify">
+                                <h3>${book.title}<small class="text-muted">${book.subtitle}</small></h3>     
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span class="badge rounded-pill bg-secondary"><div title="${book.ratingsCount} ratings">${ratingHTML}</div></span>
+                            <span class="badge rounded-pill bg-secondary">${book.authors}</span>
+                            <span class="badge rounded-pill bg-secondary">${book.publisher}</span>
+                            <span class="badge rounded-pill bg-secondary">${book.publishedYear}</span>
+                        </td>  
+                    </tr>
+                    <tr>
+                        <td>
+                            <table>
+                                <tr class="align-top">
+                                    <td class="px-2"> 
+                                        <img src="${book.cover}" alt="No cover available."> 
+                                    </td>
+                                    <td class="text-justify px-2" style="
+                                        overflow: hidden; 
+                                        text-overflow: ellipsis; 
+                                        display: -webkit-box;
+                                                -webkit-line-clamp: 9; /* number of lines to show */
+                                                        line-clamp: 9; 
+                                                -webkit-box-orient: vertical;">
+                                            ${book.synopsis}
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                        </td>
+                    </tr>
+                </table>
+            </div>`;
         }); 
     }
 
