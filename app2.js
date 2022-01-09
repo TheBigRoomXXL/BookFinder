@@ -1,17 +1,19 @@
 var booksList = [];
+var queryNumber = 0;
 
 document.getElementById("form-search").addEventListener("submit", function(evt)
 {
     evt.preventDefault();
+    queryNumber = 0;
     const keyworkds = document.getElementById('keywords').value;
-    queryGoogleBook(keyworkds,true);
+    queryGoogleBook(keyworkds,true, queryNumber);
 });
 
 document.getElementById("loadMoreBtn").addEventListener("click", function(evt)
 {
     const keyworkds = document.getElementById('keywords').value;
     queryNumber += 1;
-    queryGoogleBook(keyworkds,false);
+    queryGoogleBook(keyworkds,false, queryNumber);
 });
 
 
@@ -19,7 +21,7 @@ document.getElementById("loadMoreBtn").addEventListener("click", function(evt)
 function queryGoogleBook(keywords,reset)
 {
     if(keywords == ""){keywords = "stoic";}
-    let queryText = `https://www.googleapis.com/books/v1/volumes?q=${keywords}&key=AIzaSyC-NoSWtoOfk4H8R2RFEga3kpM4lcbB_s0`;
+    let queryText = `https://www.googleapis.com/books/v1/volumes?q=${keywords}&startIndex=${queryNumber*10}&key=AIzaSyC-NoSWtoOfk4H8R2RFEga3kpM4lcbB_s0`;
     const xhr = new XMLHttpRequest();
     xhr.open('GET', queryText, true);
     xhr.onload = function ()
