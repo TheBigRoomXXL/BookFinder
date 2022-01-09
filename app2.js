@@ -182,7 +182,7 @@ class UI
             //Génération des tables HTML. Une table par book.
             booksContainer.innerHTML += `
             <div class="container bg-white my-3 " style="border-radius: 15px; overflow: hidden;">
-                <table class="table table-light table-borderless my-3 p-2" >
+                <table class="table table-borderless my-3 p-2" >
                     <tr>
                         <td class="text-justify">
                                 <h3>${book.title}<small class="text-muted">${book.subtitle}</small></h3>     
